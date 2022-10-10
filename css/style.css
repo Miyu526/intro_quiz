@@ -1,0 +1,36 @@
+html {
+  font-family: "メイリオ", "Hiragino Kaku Gothic", sans-serif;
+}
+
+header {
+  background-color: darkcyan;
+}
+
+.bg-img {
+  background-image: url(../img/main.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.pagetop {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 100;
+}
+
+.pagetop:hover {
+  opacity: .8;
+}
+
+.container {
+    padding: 32px;
+}
+
+#play {
+  background-color: darkcyan;
+}
+
+footer {
+  background-color:rgb(243, 243, 243);
+}

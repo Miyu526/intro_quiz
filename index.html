@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.ico" id="favicon">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Intro Quiz</title>
+</head>
+
+<body>
+  <header class="text-white container-fluid">
+    <p class="m-0">
+      <a href="index.html">
+        <img src="img/logo.png" alt="ロゴ">
+      </a>
+    </p>
+  </header>
+  <div class="text-center">
+    <main>
+      <section>
+        <div class="bg-img py-5 text-white">
+          <h1 class="fs-2">ランダムに再生する</h1>
+          <p>下の一覧から曲を選ぶ / 紅・妖・永 / 58曲</p>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <button id="play" onclick="randomplay(playlist)" class="text-white btn btn-lg">音楽をランダム再生</button>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <p>↓クリックまたはタップで一覧に移動↓</p>
+          <ul id="list-example" class="list-group list-unstyled">
+            <li>
+              <a class="list-group-item list-group-item-action py-4" href="#koumakyo">紅魔郷</a>
+            </li>
+            <li>
+              <a class="list-group-item list-group-item-action py-4" href="#youyoumu">妖々夢</a>
+            </li>
+            <li>
+              <a class="list-group-item list-group-item-action py-4" href="#eiyasyou">永夜抄</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <div class="mb-5">
+              <h3 id="koumakyo">紅魔郷</h3>
+              <ol class="list-unstyled">
+                <li class="py-2">
+                  <button onclick="judge(playlist[0].id)" class="btn btn-link">赤より紅い夢</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[1].id)" class="btn btn-link">ほおずきみたいに紅い魂</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[2].id)" class="btn btn-link">妖魔夜行</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[3].id)" class="btn btn-link">ルーネイトエルフ</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[4].id)" class="btn btn-link">おてんば恋娘</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[5].id)" class="btn btn-link">上海紅茶館 ~ Chinese Tea</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[6].id)" class="btn btn-link">明治十七年の上海アリス</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[7].id)" class="btn btn-link">ヴワル魔法図書館</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[8].id)" class="btn btn-link">ラクトガール ~ 少女密室</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[9].id)" class="btn btn-link">メイドと血の懐中時計</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[10].id)" class="btn btn-link">月時計 ~ ルナ・ダイアル</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[11].id)" class="btn btn-link">ツェペシュの幼き末裔</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[12].id)" class="btn btn-link">亡き王女のためのセプテット</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[13].id)" class="btn btn-link">魔法少女達の百年祭</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[14].id)" class="btn btn-link">U.N.オーエンは彼女なのか？</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[15].id)" class="btn btn-link">紅より儚い永遠</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[16].id)" class="btn btn-link">紅楼 ~ Eastern Dream...</button>
+                </li>
+              </ol>
+            </div>
+            <div class="my-5">
+              <h3 id="youyoumu">妖々夢</h3>
+              <ol class="list-unstyled">
+                <li class="py-2">
+                  <button onclick="judge(playlist[17].id)" class="btn btn-link">妖々夢 ~ Snow or Cherry Petal</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[18].id)" class="btn btn-link">無何有の郷 ~ Deep Mountain</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[19].id)" class="btn btn-link">クリスタライズシルバー</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[20].id)" class="btn btn-link">遠野幻想物語</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[21].id)" class="btn btn-link">ティアオイエツォン (withered leaf)</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[22].id)" class="btn btn-link">ブクレシュティの人形師</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[23].id)" class="btn btn-link">人形裁判 ~ 人の形弄びし少女</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[24].id)" class="btn btn-link">天空の花の都</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[25].id)" class="btn btn-link">幽霊楽団 ~ Phantom Ensemble</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[26].id)" class="btn btn-link">東方妖々夢 ~ Ancient Temple</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[27].id)" class="btn btn-link">広有射怪鳥事 ~ Till When?</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[28].id)" class="btn btn-link">アルティメットトゥルース</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[29].id)" class="btn btn-link">優雅に咲かせ、墨染の桜 ~ Border of Life</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[30].id)" class="btn btn-link">ボーダーオブライフ</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[31].id)" class="btn btn-link">妖々跋扈</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[32].id)" class="btn btn-link">少女幻葬 ~ Necro-Fantasy</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[33].id)" class="btn btn-link">妖々跋扈 ~ Who done it!</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[34].id)" class="btn btn-link">ネクロファンタジア</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[35].id)" class="btn btn-link">春風の夢</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[36].id)" class="btn btn-link">さくらさくら ~ Japanize Dream...</button>
+                </li>
+              </ol>
+            </div>
+            <div class="my-5">
+              <h3 id="eiyasyou">永夜抄</h3>
+              <ol class="list-unstyled">
+                <li class="py-2">
+                  <button onclick="judge(playlist[37].id)" class="btn btn-link">永夜抄 ~ Eastern Night</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[38].id)" class="btn btn-link">幻視の夜 ~ Ghostly Eyes</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[39].id)" class="btn btn-link">蠢々秋月 ~ Mooned Insect</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[40].id)" class="btn btn-link">夜雀の歌声 ~ Night Bird</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[41].id)" class="btn btn-link">もう歌しか聞こえない</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[42].id)" class="btn btn-link">懐かしき東方の血 ~ Old World</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[43].id)" class="btn btn-link">プレインエイジア</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[44].id)" class="btn btn-link">永夜の報い ~ Imperishable Night</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[45].id)" class="btn btn-link">少女綺想曲 ~ Dream Battle</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[46].id)" class="btn btn-link">恋色マスタースパーク</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[47].id)" class="btn btn-link">シンデレラケージ ~ Kagome-Kagome</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[48].id)" class="btn btn-link">狂気の瞳 ~ Invisible Full Moon</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[49].id)" class="btn btn-link">ヴォヤージュ1969</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[50].id)" class="btn btn-link">千年幻想郷 ~ History of the Moon</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[51].id)" class="btn btn-link">竹取飛翔 ~ Lunatic Princess</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[52].id)" class="btn btn-link">ヴォヤージュ1970</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[53].id)" class="btn btn-link">エクステンドアッシュ ~ 蓬莱人</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[54].id)" class="btn btn-link">月まで届け、不死の煙</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[55].id)" class="btn btn-link">月見草</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[56].id)" class="btn btn-link">Eternal Dream ~ 幽玄の槭樹</button>
+                </li>
+                <li class="py-2">
+                  <button onclick="judge(playlist[57].id)" class="btn btn-link">東方妖怪小町</button>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <p class="pagetop">
+        <a href="#">
+          <img src="img/pagetop.png" alt="ページトップへ戻る">
+        </a>
+      </p>
+    </main>
+    <footer>
+      <p class="py-1 my-0 small text-black-50">&copy; 2022 Miyu</p>
+      <!-- 2022/10/06 -->
+    </footer>
+  </div>
+  <!-- jQuery -->
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <!-- Vue.js -->
+  <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
